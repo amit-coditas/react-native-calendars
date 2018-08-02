@@ -185,6 +185,7 @@ class Calendar extends Component {
           onLongPress={this.longPressDay}
           date={xdateToData(day)}
           marking={this.getDateMarking(day)}
+          testId={date}
         >
           {date}
         </DayComp>

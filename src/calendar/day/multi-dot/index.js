@@ -6,6 +6,7 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 
+import {testID} from '../../../utils';
 import {shouldUpdate} from '../../../component-updater';
 
 import styleConstructor from './style';
@@ -80,7 +81,8 @@ class Day extends Component {
       <TouchableOpacity
         style={containerStyle}
         onPress={this.onDayPress}
-        onLongPress={this.onDayLongPress}>
+        onLongPress={this.onDayLongPress}
+        {...testID(String(this.props.testId))}>
         <Text allowFontScaling={false} style={textStyle}>{String(this.props.children)}</Text>
         <View style={{flexDirection: 'row'}}>{dot}</View>
       </TouchableOpacity>

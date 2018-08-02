@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { TouchableOpacity, Text, View } from 'react-native';
 import PropTypes from 'prop-types';
+
+import {testID} from '../../../utils';
 import {shouldUpdate} from '../../../component-updater';
 
 import styleConstructor from './style';
@@ -94,7 +96,7 @@ class Day extends Component {
           alignItems: 'center',
           alignSelf: 'stretch',
         }}>
-        <TouchableOpacity style={containerStyle} onPress={this.onDayPress}>
+        <TouchableOpacity style={containerStyle} onPress={this.onDayPress} {...testID(String(this.props.testId))}>
           <Text allowFontScaling={false} style={textStyle}>
             {String(this.props.children)}
           </Text>

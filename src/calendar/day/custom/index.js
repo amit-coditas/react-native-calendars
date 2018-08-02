@@ -6,6 +6,7 @@ import {
 import PropTypes from 'prop-types';
 
 import styleConstructor from './style';
+import {testID} from '../../../utils';
 import {shouldUpdate} from '../../../component-updater';
 
 class Day extends Component {
@@ -79,6 +80,7 @@ class Day extends Component {
         onLongPress={this.onDayLongPress}
         activeOpacity={marking.activeOpacity}
         disabled={marking.disableTouchEvent}
+        {...testID(String(this.props.testId))}
       >
         <Text allowFontScaling={false} style={textStyle}>{String(this.props.children)}</Text>
       </TouchableOpacity>

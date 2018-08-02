@@ -5,6 +5,8 @@ import {
   Text,
   View
 } from 'react-native';
+
+import {testID} from '../../../utils';
 import {shouldUpdate} from '../../../component-updater';
 import isEqual from 'lodash.isequal';
 
@@ -194,7 +196,8 @@ class Day extends Component {
     return (
       <TouchableWithoutFeedback
         onPress={this.onDayPress}
-        onLongPress={this.onDayLongPress}>
+        onLongPress={this.onDayLongPress}
+        {...testID(String(this.props.testId))}>
         <View style={this.style.wrapper}>
           {fillers}
           <View style={containerStyle}>
