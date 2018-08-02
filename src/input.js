@@ -1,8 +1,10 @@
 export class VelocityTracker {
   constructor() {
+
     this.history = [];
     this.lastPosition = undefined;
     this.lastTimestamp = undefined;
+    
   }
 
   add(position) {
