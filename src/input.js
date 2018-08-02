@@ -4,7 +4,6 @@ export class VelocityTracker {
     this.history = [];
     this.lastPosition = undefined;
     this.lastTimestamp = undefined;
-    
   }
 
   add(position) {
